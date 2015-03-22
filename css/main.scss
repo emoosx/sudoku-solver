@@ -1,0 +1,46 @@
+@import "reset";
+@import "helper";
+
+$background-color: #faf8ef;
+$text-color: #776e65;
+$bright-text-color: #f9f6f2;
+
+// grid
+$cell-height: 30px;
+$cell-width: 30px;
+
+html, body {
+  background: $background-color;
+  color: $text-color;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+}
+
+table {
+  margin: 1em auto;
+
+  tr {
+    &:first-child {
+      boder-top: solid;
+    }
+
+    &:nth-child(3n) td {
+      border-bottom: solid;
+    }
+  }
+
+  td {
+    height: $cell-height;
+    width: $cell-width;
+    border: 1px solid;
+    text-align: center;
+
+    &:first-child {
+      border-left: solid;
+    }
+
+    &:nth-child(3n) {
+      border-right: solid;
+    }
+  }
+}
